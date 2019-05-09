@@ -22,11 +22,12 @@ class ActionPlaceSearch(Action):
     def run(self, dispatcher, tracker, domain):
         #retrieve slot values	
         query = tracker.get_slot('query')
-        radius = tracker.get_slot('number')		
+        radius = tracker.get_slot('number')
+        radius = 1000
 
         #retrieve google api key		
         with open("./credentials.yml", 'r') as ymlfile:
-            cfg = yaml.load(ymlfile)
+            cfg = yaml.load(ymlfile, Loader=yaml.FullLoader)
         key = cfg['credentials']['GOOGLE_KEY']
 		
         #get user's current location		
@@ -36,7 +37,11 @@ class ActionPlaceSearch(Action):
         origin_lng = get_origin['location']['lng']
 				
         #look for a place using all the details
-        place = requests.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&radius={}&type={}&key={}'.format(origin_lat, origin_lng, radius, query, key)).json()
+
+        placeurl='https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&radius={}&type={}&key={}'.format(origin_lat, origin_lng, radius, query, key)
+        print(" ===placeurl ",placeurl)
+
+        place = requests.get(placeurl).json()
         if len(place['results'])==0:
             dispatcher.utter_message("Sorry, I didn't find anything")
             return [SlotSet('location_match', 'none')]

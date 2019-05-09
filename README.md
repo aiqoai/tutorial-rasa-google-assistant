@@ -20,5 +20,17 @@ The best way to use this repository is to follow a step-by-step tutorial on how 
 
 If you have any questions about this tutorial or this repository, feel free to share them on [Rasa Community Forum](https://forum.rasa.com). 
 
+Actions console:
+
+    https://console.actions.google.com/u/2/project/place-finder-cf52a/simulatorcreate
 
 https://blog.rasa.com/going-beyond-hey-google-building-a-rasa-powered-google-assistant/
+
+
+PORT:
+endpoint http://localhost:5055/webhook
+
+
+run_app.py   5004.  ->endpoint
+
+Ngrok 5004—>run_app
