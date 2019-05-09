@@ -50,7 +50,8 @@ class GoogleConnector(InputChannel):
                 out = CollectingOutputChannel()			
                 on_new_message(UserMessage(text, out, sender_id))
                 responses = [m["text"] for m in out.messages]
-                message = responses[0]	
+                message = responses[0]
+
             r = json.dumps(
                 {
                   "conversationToken": "{\"state\":null,\"data\":{}}",

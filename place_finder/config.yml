@@ -4,5 +4,6 @@ pipeline:
 - name: "ner_crf"
 - name: "intent_featurizer_spacy"
 - name: "intent_classifier_sklearn"
-- name: "ner_duckling"
-  dimensions: ['number']
+- name: "ner_spacy"
+#- name: "ner_duckling"
+#  dimensions: ['number']

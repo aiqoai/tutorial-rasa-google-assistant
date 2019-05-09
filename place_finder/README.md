@@ -32,12 +32,19 @@ The repository consists of the following files and directories:
 
 ## How to use this repository  
 To train the Rasa NLU model run:  
-```python -m rasa_nlu.train -c config.yml --data data/nlu_data.md -o models --fixed_model_name nlu_model --project current --verbose```  
+```
+python -m rasa_nlu.train -c config.yml --data data/nlu_data.md -o models --fixed_model_name nlu_model --project current --verbose
+
+```  
 
 To train the Rasa Core model run:  
-```python -m rasa_core.train -d domain.yml -s data/stories.md -o models/current/dialogue --epochs 200```  
+```
+python -m rasa_core.train -d domain.yml -s data/stories.md -o models/current/dialogue --epochs 200
 
-To run this assistant you will need a [Google Place API](https://developers.google.com/places/web-service/get-api-key) key which you should provide inside the credentials.yml file of these directories.
+```  
+
+To run this assistant you will need a [Google Place API](https://developers.google.com/places/web-service/get-api-key) 
+key which you should provide inside the credentials.yml file of these directories.
 
 ## Let us know how you are getting on!   
 If you have any questions regarding this repository, please post them on the [Rasa Community Forum](https://forum.rasa.com)!

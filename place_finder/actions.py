@@ -53,7 +53,8 @@ class ActionPlaceSearch(Action):
                     break
         speech = "I found a {} called {} based on your specified parameters.".format(query, name)
         dispatcher.utter_message(speech) #send the response back to the user	
-        return [SlotSet('location_match', 'one'), SlotSet('rating', rating), SlotSet('address', address), SlotSet('opening_hours', opening_hours)] #set returned details as slots
+        return [SlotSet('location_match', 'one'), SlotSet('rating', rating), SlotSet('address', address), SlotSet('opening_hours', opening_hours)]
+        #set returned details as slots
 
 
 

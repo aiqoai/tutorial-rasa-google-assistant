@@ -1,4 +1,5 @@
 ## Setup py requirements
+service_identity==18.1.0
 jsonpickle==0.9.6
 six==1.11.0
 redis==2.10.6
@@ -9,7 +10,7 @@ typing==3.6.4
 ruamel.yaml==0.15.37
 requests==2.18.4
 keras==2.1.6
-tensorflow==1.10.0
+#tensorflow==1.10.0
 h5py==2.7.1
 apscheduler==3.5.1
 tqdm==4.23.3
@@ -35,3 +36,6 @@ python-dateutil==2.7.3
 spacy==2.0.12
 sklearn_crfsuite==0.3.6
 duckling==1.8.0
+
+#tensorflow               1.13.1
+#tensorflow-estimator     1.13.0
