@@ -13,7 +13,6 @@ import yaml
 
 
 
-
 class ActionPlaceSearch(Action):
     def name(self):
         #define the name of the action		
@@ -25,7 +24,6 @@ class ActionPlaceSearch(Action):
         radius = tracker.get_slot('number')
         print("----> radius is: ", radius)
 
-        radius = 1000
 
         #retrieve google api key		
         with open("./credentials.yml", 'r') as ymlfile:
@@ -41,7 +39,7 @@ class ActionPlaceSearch(Action):
         #look for a place using all the details
 
         placeurl='https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={},{}&radius={}&type={}&key={}'.format(origin_lat, origin_lng, radius, query, key)
-        print(" ===placeurl ",placeurl)
+        print(" ===placeurl ", placeurl)
 
         place = requests.get(placeurl).json()
         if len(place['results'])==0:

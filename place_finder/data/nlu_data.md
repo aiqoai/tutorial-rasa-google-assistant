@@ -40,7 +40,7 @@
 ## intent: place_search
 - I am looking for a [restaurant](query).
 - Where is the closest [cinema](query)?
-- Looking for a [supermarket](query) within 50 meters from me.
+- Looking for a [supermarket](query) within [50](number) meters from me.
 - Can you tell me where is the [restaurant](query) in 100 meters from where I am?
 - Is there a [market](query) within 500 meters?
 - Where is the closest [shop](query)?
@@ -93,14 +93,15 @@
 - I want to know the rating 
 
 
-## itent: inform
-- 10 meters 
-- 100 meters
-- 1500
-- around 100
-- let's say 50 meters
-- within 15 meters
-- within 25 meters from here
+## intent: inform
+- [10](number) meters
+- [100](number) meters 
+- [1500](number)
+- [1000](number)
+- around [100](number)
+- let's say [50](number) meters
+- within [15](number) meters
+- within [25](number) meters from here
 
 
 

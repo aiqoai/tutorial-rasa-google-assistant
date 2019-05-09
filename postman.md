@@ -1,3 +1,18 @@
+# webhook health check
+GET /webhooks/google_home/ HTTP/1.1
+Host: 43b59c37.ngrok.io
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.11.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: c734ecdb-0578-4f2c-922f-78852fabe0e1,8ceb211f-ddf8-4120-9299-a50eaf7fdf2a
+Host: 43b59c37.ngrok.io
+accept-encoding: gzip, deflate
+Connection: keep-alive
+cache-control: no-cache
+
+
+
 
 #greet
 
@@ -22,6 +37,27 @@ cache-control: no-cache
 
 }
 
+#hello
+POST /webhooks/google_home/webhook HTTP/1.1
+Host: 43b59c37.ngrok.io
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.11.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: e318e515-08aa-48f6-ab8c-5e57d9af66b1,e96752e1-6e59-4151-9d7d-971a5a821c08
+Host: 43b59c37.ngrok.io
+accept-encoding: gzip, deflate
+content-length: 105
+Connection: keep-alive
+cache-control: no-cache
+
+{
+
+"user":{"userId":"1"},
+"inputs":[{"intent":"actions.intent.TEXT",
+"rawInputs":[{"query":"hello"}]}]
+
+}
 
 #looking for restaurant
 POST /webhooks/google_home/webhook HTTP/1.1
@@ -50,6 +86,26 @@ cache-control: no-cache
 
 
 #ask for distance
+POST /webhooks/google_home/webhook HTTP/1.1
+Host: 43b59c37.ngrok.io
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.11.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: fc091216-f3fb-4eca-ae03-2dce73b5de0c,0382def1-89f2-47f9-a34c-0c226ee4422a
+Host: 43b59c37.ngrok.io
+accept-encoding: gzip, deflate
+content-length: 118
+Connection: keep-alive
+cache-control: no-cache
+
+{
+
+"user":{"userId":"1"},
+"inputs":[{"intent":"actions.intent.TEXT",
+"rawInputs":[{"query":"around 1000 meters"}]}]
+
+}
 
 #ask for address
 POST /webhooks/google_home/webhook HTTP/1.1
@@ -73,6 +129,27 @@ cache-control: no-cache
 
 }
 
+# ask for rating
+POST /webhooks/google_home/webhook HTTP/1.1
+Host: 43b59c37.ngrok.io
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.11.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: f8f51d25-61c5-4e59-9dfe-7e79dba8d624,84d5e4fe-b4fb-4557-8d34-6318cee1a731
+Host: 43b59c37.ngrok.io
+accept-encoding: gzip, deflate
+content-length: 118
+Connection: keep-alive
+cache-control: no-cache
+
+{
+
+"user":{"userId":"1"},
+"inputs":[{"intent":"actions.intent.TEXT",
+"rawInputs":[{"query":"what is the rating"}]}]
+
+}
 
 #goodby
 POST /webhooks/google_home/webhook HTTP/1.1

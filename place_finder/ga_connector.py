@@ -14,7 +14,7 @@ import json
 logger = logging.getLogger(__name__)
 
 
-
+#GET /webhooks/google_home/ HTTP/1.1
 		
 class GoogleConnector(InputChannel):
     """A custom http input channel.
@@ -36,7 +36,7 @@ class GoogleConnector(InputChannel):
 
         @google_webhook.route("/", methods=['GET'])
         def health():
-            return jsonify({"status": "ok"})
+            return jsonify({"status": "ok","brand":"aiQo.ai"})
 
         @google_webhook.route("/webhook", methods=['POST'])
         def receive():
@@ -44,8 +44,9 @@ class GoogleConnector(InputChannel):
             sender_id = payload['user']['userId']
             intent = payload['inputs'][0]['intent'] 			
             text = payload['inputs'][0]['rawInputs'][0]['query'] 		
-            if intent == 'actions.intent.MAIN':	
-                message = "<speak>Hello! <break time=\"1\"/> Welcome to the Rasa-powered Google Assistant skill. You can start by saying hi."			 
+            if intent == 'actions.intent.MAIN':
+
+                message = "<speak>Hello! <break time=\"1\"/> Welcome to aiQo Learn with Google Assistant skill. You can start by saying hi."
             else:
                 out = CollectingOutputChannel()			
                 on_new_message(UserMessage(text, out, sender_id))
