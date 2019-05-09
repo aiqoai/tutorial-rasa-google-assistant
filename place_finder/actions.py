@@ -23,6 +23,8 @@ class ActionPlaceSearch(Action):
         #retrieve slot values	
         query = tracker.get_slot('query')
         radius = tracker.get_slot('number')
+        print("----> radius is: ", radius)
+
         radius = 1000
 
         #retrieve google api key		

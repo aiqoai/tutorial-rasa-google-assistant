@@ -72,3 +72,27 @@ cache-control: no-cache
 "rawInputs":[{"query":"what is the address"}]}]
 
 }
+
+
+#goodby
+POST /webhooks/google_home/webhook HTTP/1.1
+Host: 43b59c37.ngrok.io
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.11.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 258472ce-9df4-4e3b-a308-3f25960a8d88,f0aa1934-3982-48fc-83db-c84e20f7b753
+Host: 43b59c37.ngrok.io
+accept-encoding: gzip, deflate
+content-length: 107
+Connection: keep-alive
+cache-control: no-cache
+
+{
+
+"user":{"userId":"1"},
+"inputs":[{"intent":"actions.intent.TEXT",
+"rawInputs":[{"query":"Goodbye"}]}]
+
+}
+
