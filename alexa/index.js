@@ -30,7 +30,7 @@ app.post('/', jsonParser, (req, res) =>
         outputSpeech: {
             type: 'SSML',
             text: 'Hello World! aiQo learn ',
-            ssml: '<speak>Hello qiQo learn!</speak>'
+            ssml: '<speak>Hello aiQo learn!</speak>'
             }
         }
     })
