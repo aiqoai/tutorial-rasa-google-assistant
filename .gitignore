@@ -2,3 +2,4 @@ place_finder/models/
 *.pyc
 .idea/
 place_finder/__pycache__/
+alexa/node_modules/
